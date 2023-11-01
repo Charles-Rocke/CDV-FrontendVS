@@ -1162,11 +1162,16 @@
     <script type="module">
       import { supabase } from "/src/services/supa.js";
       document.addEventListener("DOMContentLoaded", async function () {
+        console.log("DOM CONTENT LOADED");
         document
           .getElementById("conversionForm")
           .addEventListener("submit", async (e) => {
-            e.preventDefault(); // Prevent the default form submission behavior
+            console.log("Preventing default");
+            e.preventDefault();
+            // Prevent the default form submission behavior
+            console.log("trying");
             try {
+              console.log("in try");
               // Show the loading overlay when the conversion starts
               document.getElementById("loadingOverlay").style.display = "flex"; // Display the overlay
               console.log("Convert clicked");
