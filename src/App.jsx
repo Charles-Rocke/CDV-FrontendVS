@@ -25,13 +25,13 @@ function App() {
       console.log("Convert clicked");
 
       // Send the checkbox states to the server
-      const response = await fetch(`https://dt-suite.onrender.com/convert`, {
+      const response = await fetch(`http://localhost:3000`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ inputFieldValues }),
-      });
+      }); //https://dt-suite.onrender.com/convert
 
       if (response.ok) {
         console.log("Webpage converted to JPG");
@@ -103,7 +103,7 @@ function App() {
   }
   return (
     <>
-      <div></div>
+      <div className=""></div>
     </>
   );
 }
